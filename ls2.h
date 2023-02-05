@@ -9,4 +9,7 @@
 
 // TODO: Function declarations here for ls2
 
+void modeOne(char* argument, int counter);
+int modeTwo(char* argument, char* filename, stack_t *s2, int counter2);
+
 #endif
