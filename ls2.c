@@ -7,7 +7,12 @@
 #include "ls2.h"
 
 // TODO: function definitions here for ls2
-
+/**
+ * Opens the directory given by path and recursively show all files’ name and size in bytes
+ *
+ * @param	*argument pointer to the command line argument 
+ * @param   counter for indents 
+ */
 void modeOne(char *argument, int counter){
 
 	char newIndent[500];
@@ -74,6 +79,16 @@ void modeOne(char *argument, int counter){
     closedir(stream);
 }
 
+/**
+ * Only shows files that match the optional-file that the user gives, and all directories
+ * and subdirectories the files are contained inside
+ *
+ * @param	*argument pointer to the command line argument 
+ * @param   *filename the file to match files with
+ * @param   *s2 pointer to the stack
+ * @param   counter2  for indents 
+ * @result  integer representing if file was found or not 
+ */
 int modeTwo(char *argument, char *filename, stack_t *s2, int counter2){
 	char newIndent[500];
 	int truth = 0; //keeps track of if we need to add dirs/subdirs, set to false initially
